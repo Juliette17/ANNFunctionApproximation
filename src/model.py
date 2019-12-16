@@ -42,7 +42,7 @@ def train_model(X_train, y_train, file_name_to_save_model = 'model.h5'):
 # X_test, y_test - to evaluate model only at the end of project!!!!!!!
 X_train, X_valid, X_test, y_train, y_valid, y_test = prepare_datasets_for_training()
 # uncomment to train new model
-#model, history = train_model(X_train, y_train)
+model, history = train_model(X_train, y_train)
 model = load_model('model.h5')
 results = model.evaluate(X_valid, y_valid)
 

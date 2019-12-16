@@ -2,6 +2,7 @@ from math import sqrt, sin, cos
 import pandas as pd
 
 DATASET_SIZE = 10000
+DENSITY = 0.1
 
 def load_dataset():
     dataset = pd.read_csv('dataset.csv')
@@ -18,7 +19,7 @@ def prepare_dataset(set_size):
     data.columns = ['x', 'y', 'z']
     return data
 
-def generate_points(points_number):
+def generate_points(points_number=DATASET_SIZE, density=DENSITY):
     # f(x,y) = sin(x)*cos(5*y)/5
 
     # generate range of area to generate points, x and y both in range [-sphere_range, sphere_range)
@@ -29,7 +30,10 @@ def generate_points(points_number):
     points = []
     for x in range(xmin, xmax, 1):
         for y in range(ymin, ymax, 1):
-            z = sin(x)*cos(5*y)/5 # calculate z coordinate with given f(x,y)
-            points.append([x,y,z]) 
+            z = sin(x*density)*cos(5*y*density)/5 # calculate z coordinate with given f(x,y)
+            points.append([x*density,y*density,z]) 
 
     return points
+
+# uncomment to generate dataset
+save_dataset()
