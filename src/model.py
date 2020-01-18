@@ -42,14 +42,18 @@ def train_model(X_train, y_train, model_file='model.h5', history_file='trainHist
     return model, history.history
 
 # layers_neurons=[32,16,1], lr=0.0003, momentum=0.95, mse = 0.0054
-def build_model():
+def build_model(layers_neurons=[32,16,1], lr=0.0003, momentum=0.95):
     # define the keras model
     model = Sequential()
-    model.add(Dense(32, input_dim=2, kernel_initializer='normal', activation='tanh'))
-    model.add(Dense(16, kernel_initializer='normal', activation='tanh'))
-    model.add(Dense(1, kernel_initializer='normal'))
+    for i in range(len(layers_neurons)):
+        if i == 0:
+            model.add(Dense(layers_neurons[i], input_dim=2, kernel_initializer='normal', activation='tanh'))
+        elif i == len(layers_neurons)-1:
+            model.add(Dense(layers_neurons[i], kernel_initializer='normal'))
+        else:
+            model.add(Dense(layers_neurons[i], kernel_initializer='normal', activation='tanh'))
 
-    sgd = optimizers.SGD(lr=0.0003, decay=1e-6, momentum=0.95, nesterov=True)
+    sgd = optimizers.SGD(lr=lr, decay=1e-6, momentum=momentum, nesterov=True)
     model.compile(loss='mean_squared_error', optimizer=sgd)
 
     return model
