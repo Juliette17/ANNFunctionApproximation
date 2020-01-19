@@ -15,7 +15,7 @@ from numpy import mean, std
 
 
 # TODO: add ArgumentParser
-def run(train_new_model=True, model_file='model.h5', history_file='trainHistoryDict', evaluation='manual'):
+def run(train_new_model=False, model_file='model.h5', history_file='trainHistoryDict', evaluation='manual'):
     X_train, X_valid, X_test, y_train, y_valid, y_test = get_datasets()
 
     if evaluation == 'keras':
@@ -73,4 +73,4 @@ def evaluate_with_keras_pipeline(X_valid, y_valid):
     print("Larger: %.4f (%.4f) MSE" % (results.mean(), results.std()))
 
 
-run(train_new_model=True)
+run(train_new_model=False)
