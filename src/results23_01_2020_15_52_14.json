@@ -1,0 +1,15 @@
+[
+    {
+        "first_layer_neurons": 32,
+        "second_layer_neurons": 4,
+        "learning_rate": 0.001,
+        "momentum": 0.99,
+        "epochs": 20,
+        "batch_size": 20,
+        "sample_size": 20,
+        "train_mean": 0.0005710899020596117,
+        "train_std": 0.00014434632609808634,
+        "valid_mean": 0.0005338115007907619,
+        "valid_std": 0.00014868585375617035
+    }
+]
