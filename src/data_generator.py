@@ -39,7 +39,7 @@ def generate_points(points_number=DATASET_SIZE, density=DENSITY, noise=NOISE):
     for x in range(xmin, xmax, 1):
         for y in range(ymin, ymax, 1):
             # calculate z coordinate with given f(x,y) with noise
-            z = 5 * sin(0.1 * x * density) * cos(0.5 * y * density) + np.random.normal(0, noise, 1)
+            z = 5 * sin(0.1 * x * density) * cos(0.5 * y * density) + np.random.normal(0, noise)
             points.append([x * density, y * density, z])
 
     return points
