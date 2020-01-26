@@ -1,5 +1,6 @@
 from math import sqrt, sin, cos
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 import pandas as pd
 import numpy as np
@@ -47,7 +48,7 @@ def generate_points(points_number=DATASET_SIZE, density=DENSITY, noise=NOISE):
 
 def plot_surface(x, y, z, lwidth=0.2):
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
+    ax = Axes3D(fig)
     ax.plot_trisurf(x, y, z, linewidth=lwidth, cmap=cm.jet)
     plt.show()
 
