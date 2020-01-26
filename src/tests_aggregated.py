@@ -10,12 +10,41 @@ import json
 def run_tests():
     print("Beginning tests...")
     start = timer()
-    test_params()
+    test_params(
+        param_to_test="first_layer_neurons",
+        sample_size=10,
+        fln=[2, 4, 8, 16, 32]
+    )
+    test_params(
+        param_to_test="second_layer_neurons",
+        sample_size=10,
+        sln=[2, 4, 8, 16, 32]
+    )
+    test_params(
+        param_to_test="learning_rate",
+        sample_size=10,
+        lr=[0.01, 0.005, 0.002, 0.001, 0.0008, 0.0005, 0.0001]
+    )
+    test_params(
+        param_to_test="momentum",
+        sample_size=10,
+        mom=[0.9, 0.925, 0.95, 0.975, 0.99]
+    )
+    test_params(
+        param_to_test="epochs",
+        sample_size=10,
+        e=[12, 14, 16, 18, 20, 22, 24, 26]
+    )
+    test_params(
+        param_to_test="batch_size",
+        sample_size=10,
+        bs=[1, 5, 10, 20, 50, 100]
+    )
     end = timer()
     print("Tests finished with {} seconds! You can check results in 'resultsDD_MM_YYYY_HH_MM_SS.json' file.".format(end - start))
 
 
-def test_params(save_file="results", sample_size=20, fln=[32], sln=[4], lr=[0.001], mom=[0.99], e=[20], bs=[20]):
+def test_params(param_to_test, save_file="results", sample_size=20, fln=[32], sln=[4], lr=[0.001], mom=[0.99], e=[20], bs=[20]):
     X_train, X_valid, X_test, y_train, y_valid, y_test = get_datasets()
     results = []
     for i in range(len(fln)):
@@ -44,8 +73,10 @@ def test_params(save_file="results", sample_size=20, fln=[32], sln=[4], lr=[0.00
                             results.append(result)
 
     file_name = save_file + datetime.now().strftime("%d_%m_%Y_%H_%M_%S") + ".json"
+    data = {param_to_test: results}
+
     with open(file_name, "w") as file:
-        json.dump(results, file, indent=4)
+        json.dump(data, file, indent=4)
 
     return results
 
