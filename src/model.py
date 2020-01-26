@@ -8,13 +8,13 @@ from keras import optimizers
 import pickle
 
 
-def get_datasets():
-    X, y = prepare_dataset()
-    return split_dataset(X, y)
+def get_datasets(with_noise=False):
+    x, y = prepare_dataset(with_noise)
+    return split_dataset(x, y)
 
 
-def prepare_dataset():
-    df = load_dataset()
+def prepare_dataset(with_noise=False):
+    df = load_dataset(with_noise)
     dataset = df.values
     # quick check on data
     print(df.head())
