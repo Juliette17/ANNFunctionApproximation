@@ -3,13 +3,16 @@ from datetime import datetime
 
 from model import build_model, get_datasets
 import matplotlib.pyplot as plt
+from timeit import default_timer as timer
 import json
 
 
 def run_tests():
     print("Beginning tests...")
+    start = timer()
     test_params()
-    print("Tests finished! You can check results in 'resultsDD_MM_YYYY_HH_MM_SS.json' file.")
+    end = timer()
+    print("Tests finished with {} seconds! You can check results in 'resultsDD_MM_YYYY_HH_MM_SS.json' file.".format(end - start))
 
 
 def test_params(save_file="results", sample_size=20, fln=[32], sln=[4], lr=[0.001], mom=[0.99], e=[20], bs=[20]):
