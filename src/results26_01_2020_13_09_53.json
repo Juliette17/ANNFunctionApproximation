@@ -1,0 +1,69 @@
+{
+    "momentum": [
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 4,
+            "learning_rate": 0.001,
+            "momentum": 0.9,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.006768076975480654,
+            "train_std": 0.0008351082553224065,
+            "valid_mean": 0.006426323449984192,
+            "valid_std": 0.0008475834166359971
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 4,
+            "learning_rate": 0.001,
+            "momentum": 0.925,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.0045084955742349855,
+            "train_std": 0.00038922141867107283,
+            "valid_mean": 0.004427972940355539,
+            "valid_std": 0.0003266888856379942
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 4,
+            "learning_rate": 0.001,
+            "momentum": 0.95,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.003109844023167777,
+            "train_std": 0.00018688049778447567,
+            "valid_mean": 0.003013751405477524,
+            "valid_std": 0.0003189148875092529
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 4,
+            "learning_rate": 0.001,
+            "momentum": 0.975,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.0015326502451110478,
+            "train_std": 7.53718961753076e-05,
+            "valid_mean": 0.0015161402095109223,
+            "valid_std": 0.00020914373486516033
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 4,
+            "learning_rate": 0.001,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.000556415790199632,
+            "train_std": 0.00013856713447849922,
+            "valid_mean": 0.0005337169016012923,
+            "valid_std": 0.00016080498665236356
+        }
+    ]
+}
