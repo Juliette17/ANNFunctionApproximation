@@ -98,7 +98,7 @@ def test(X_train, y_train, X_valid, y_valid, sample=20, fln=32, sln=4, lr=0.001,
 
 def generate_plots():
     for i in range(1, 7):
-        file_name = "results26_01_2020_{}.json".format(i)
+        file_name = "parameters_tests//results26_01_2020_{}.json".format(i)
         with open(file_name, "r") as file:
             data = json.load(file)
 
@@ -121,14 +121,14 @@ def plot_results(param_values, loss_values, parameter):
     parameter_for_label = parameter.replace("_", " ")
     fig = plt.figure()
     for key in loss_values.keys():
-        plt.plot(param_values, loss_values[key], label=key)
+        plt.plot(param_values[2:], loss_values[key][2:], label=key)
     plt.legend()
     plt.xlabel(parameter_for_label)
     plt.ylabel("loss")
     plt.title("Loss on train and validation set for different values of {}.".format(parameter_for_label))
-    plt.savefig("loss_for_{}.png".format(parameter))
-    plt.show()
+    plt.savefig("loss_for_{}_2.png".format(parameter))
+    #plt.show()
 
 
 #run_tests()
-#generate_plots()
+generate_plots()

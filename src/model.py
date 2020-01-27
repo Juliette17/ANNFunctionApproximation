@@ -41,8 +41,8 @@ def train_model(X_train, y_train, model_file='model.h5', history_file='trainHist
         pickle.dump(history.history, file)
     return model, history.history
 
-# layers_neurons=[32,16,1], lr=0.0003, momentum=0.95, mse = 0.0054
-def build_model(layers_neurons=[32,4,1], lr=0.001, momentum=0.99):
+
+def build_model(layers_neurons=[32,8,1], lr=0.002, momentum=0.99):
     # define the keras model
     model = Sequential()
     for i in range(len(layers_neurons)):
