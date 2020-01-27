@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 from timeit import default_timer as timer
 import json
 
+import re
+
 
 def run_tests():
     print("Beginning tests...")
@@ -94,9 +96,42 @@ def test(X_train, y_train, X_valid, y_valid, sample=20, fln=32, sln=4, lr=0.001,
     return mean(train_results), std(train_results), mean(valid_results), std(valid_results)
 
 
-def plot_results(results):
-    plt.plot(results)
+def generate_plots():
+    for i in range(1, 7):
+        file_name = "results26_01_2020_{}.json".format(i)
+        print(file_name)
+        with open(file_name, "r") as file:
+            data = json.load(file)
+
+        param_values, loss_values = get_values_for_plot(data)
+        print(param_values)
+        print(loss_values)
+        plot_results(param_values, loss_values, list(data)[0])
+
+
+def get_values_for_plot(data):
+    key = list(data)[0]
+    param_values = []
+    loss_values = {"train_mean": [], "train_std": [], "valid_mean": [], "valid_std": []}
+    for test_instance in data[key]:  # experiment instance for every value of param
+        param_values.append(test_instance[key])
+        for loss in list(loss_values):  # train_mean/std, valid_mean/std
+            loss_values[loss].append(test_instance[loss])
+    return param_values, loss_values
+
+
+def plot_results(param_values, loss_values, parameter):
+    parameter_for_label = parameter.replace("_", " ")
+    fig = plt.figure()
+    for key in loss_values.keys():
+        plt.plot(param_values, loss_values[key], label=key)
+    plt.legend()
+    plt.xlabel(parameter_for_label)
+    plt.ylabel("loss")
+    plt.title("Loss on train and validation set for different values of {}.".format(parameter_for_label))
+    plt.savefig("loss_for_{}.png".format(parameter))
     plt.show()
 
 
-run_tests()
+#run_tests()
+#generate_plots()
