@@ -11,7 +11,7 @@ NOISE = 0.0
 
 
 def load_dataset(with_noise=False):
-    dataset = pd.read_csv('dataset2.csv' if with_noise else 'dataset2_noise.csv')
+    dataset = pd.read_csv('dataset2_noise.csv' if with_noise else 'dataset2.csv')
     return dataset
 
 
