@@ -62,6 +62,8 @@ def plot_loss_history(history, file_name, with_noise=False):
 
 def calculate_metrics(y_pred, y):
     errors = [(y_pred[j][0] - y[j]) ** 2 for j in range(len(y_pred))]
+    plt.hist(errors)
+    plt.show()
     result = [min(errors), max(errors), mean(errors), std(errors)]
     return [round(r, 7) for r in result]
 
@@ -142,7 +144,7 @@ def evaluate_with_keras_pipeline(X_valid, y_valid):
 
 
 #run(train_new_model=True)
-#evaluate_model_on_noisy_data(train_models=False)
+evaluate_model_on_noisy_data(train_models=False)
 
-run(model_file="model27_01_2020_16_45_06.h5", history_file="trainHistoryDict27_01_2020_16_45_06")
-run(model_file="noisy_model27_01_2020_16_45_06.h5", history_file="noisy_trainHistoryDict27_01_2020_16_45_06")
+#run(model_file="model27_01_2020_16_45_06.h5", history_file="trainHistoryDict27_01_2020_16_45_06")
+#run(model_file="noisy_model27_01_2020_16_45_06.h5", history_file="noisy_trainHistoryDict27_01_2020_16_45_06")
