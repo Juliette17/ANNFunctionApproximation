@@ -1,0 +1,108 @@
+{
+    "epochs": [
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 12,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.050196475181107716,
+            "train_std": 0.0011721298261240189,
+            "valid_mean": 0.05065312370955945,
+            "valid_std": 0.0032623019039107145
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 14,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.05021354760043323,
+            "train_std": 0.0015901022479491832,
+            "valid_mean": 0.04990190699324012,
+            "valid_std": 0.0031878316241393716
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 16,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.04943286533343295,
+            "train_std": 0.001258299711832422,
+            "valid_mean": 0.049446027387678615,
+            "valid_std": 0.004030956164429267
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 18,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.0492240681128266,
+            "train_std": 0.0011952424630785358,
+            "valid_mean": 0.04979922306835652,
+            "valid_std": 0.004091290974496382
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.0493899143616048,
+            "train_std": 0.0015072379986970932,
+            "valid_mean": 0.04969375991225243,
+            "valid_std": 0.003414124257428133
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 22,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.04910053499415516,
+            "train_std": 0.0013304436092846494,
+            "valid_mean": 0.049559819443523875,
+            "valid_std": 0.004317186612079185
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 24,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.04911446669170012,
+            "train_std": 0.0013064146776459768,
+            "valid_mean": 0.050237322649359706,
+            "valid_std": 0.004184359334305619
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 26,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.04835692630956571,
+            "train_std": 0.0009239030890315621,
+            "valid_mean": 0.04942644844502211,
+            "valid_std": 0.004366546781105356
+        }
+    ]
+}

@@ -106,6 +106,16 @@ def generate_plots():
         plot_results(param_values, loss_values, list(data)[0])
 
 
+def generate_plots_noise():
+    for i in range(6, 7):
+        file_name = "parameters_tests_noise//results27_01_2020_{}.json".format(i)
+        with open(file_name, "r") as file:
+            data = json.load(file)
+
+        param_values, loss_values = get_values_for_plot(data)
+        plot_results(param_values, loss_values, list(data)[0])
+
+
 def get_values_for_plot(data):
     key = list(data)[0]
     param_values = []
@@ -132,3 +142,4 @@ def plot_results(param_values, loss_values, parameter):
 
 #run_tests()
 generate_plots()
+#generate_plots_noise()

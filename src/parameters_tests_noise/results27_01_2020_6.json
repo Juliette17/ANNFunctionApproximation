@@ -1,0 +1,82 @@
+{
+    "batch_size": [
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 1,
+            "sample_size": 10,
+            "train_mean": 1.3524190431447367,
+            "train_std": 0.22809968385793927,
+            "valid_mean": 1.112293169248104,
+            "valid_std": 0.7199579265904753
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 5,
+            "sample_size": 10,
+            "train_mean": 0.06573450837334774,
+            "train_std": 0.003877845375037679,
+            "valid_mean": 0.06683923210352657,
+            "valid_std": 0.011300538825187924
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 10,
+            "sample_size": 10,
+            "train_mean": 0.05540204684820492,
+            "train_std": 0.002807490040159857,
+            "valid_mean": 0.05377715719342232,
+            "valid_std": 0.004514406210797664
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 20,
+            "sample_size": 10,
+            "train_mean": 0.04896961786303049,
+            "train_std": 0.0012450383999746402,
+            "valid_mean": 0.04992460594475269,
+            "valid_std": 0.003308994337509026
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 50,
+            "sample_size": 10,
+            "train_mean": 0.044882862411128974,
+            "train_std": 0.0006501499623371606,
+            "valid_mean": 0.044718560767173766,
+            "valid_std": 0.0024619865874085383
+        },
+        {
+            "first_layer_neurons": 32,
+            "second_layer_neurons": 8,
+            "learning_rate": 0.002,
+            "momentum": 0.99,
+            "epochs": 20,
+            "batch_size": 100,
+            "sample_size": 10,
+            "train_mean": 0.04366906351254631,
+            "train_std": 0.00042288673356143195,
+            "valid_mean": 0.04359806443452836,
+            "valid_std": 0.0013179864817441868
+        }
+    ]
+}
