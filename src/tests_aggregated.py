@@ -99,13 +99,10 @@ def test(X_train, y_train, X_valid, y_valid, sample=20, fln=32, sln=4, lr=0.001,
 def generate_plots():
     for i in range(1, 7):
         file_name = "results26_01_2020_{}.json".format(i)
-        print(file_name)
         with open(file_name, "r") as file:
             data = json.load(file)
 
         param_values, loss_values = get_values_for_plot(data)
-        print(param_values)
-        print(loss_values)
         plot_results(param_values, loss_values, list(data)[0])
 
 
