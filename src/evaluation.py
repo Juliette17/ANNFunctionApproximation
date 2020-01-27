@@ -115,9 +115,6 @@ def evaluate_manually(X_train, y_train, X_valid, y_valid, model, history):
     train_results = model.evaluate(X_train, y_train)
     results = model.evaluate(X_valid, y_valid)
 
-    sns.lineplot(range(2, len(history['loss'])), history['loss'][2:])
-    plt.show()
-
     print("presenting evaluation results on training set, mse loss: %.6f" % train_results)
 
     print("presenting evaluation results on validation set, mse loss: %.6f" % results)
@@ -145,4 +142,7 @@ def evaluate_with_keras_pipeline(X_valid, y_valid):
 
 
 #run(train_new_model=True)
-evaluate_model_on_noisy_data(train_models=False)
+#evaluate_model_on_noisy_data(train_models=False)
+
+run(model_file="model27_01_2020_16_45_06.h5", history_file="trainHistoryDict27_01_2020_16_45_06")
+run(model_file="noisy_model27_01_2020_16_45_06.h5", history_file="noisy_trainHistoryDict27_01_2020_16_45_06")
